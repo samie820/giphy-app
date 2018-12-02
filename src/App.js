@@ -5,6 +5,10 @@ import Image from "./components/Image";
 import spinner from "./assets/ajax-loader.gif";
 import Search from "./components/Search";
 
+/*
+  The use of .bind() on my instance methods was a personal choice,
+  an alternative will be to use arrow functions
+*/
 class App extends Component {
   constructor() {
     super();
@@ -18,9 +22,12 @@ class App extends Component {
     this.refreshPage = this.refreshPage.bind(this);
   }
 
+  // function to reload the page when the header title is clicked
   refreshPage() {
     window.location.reload();
   }
+
+  // function to make the request to the GIPHY API with the passed in search term
   search(searchValue) {
     if (searchValue !== "") {
       this.setState({
@@ -52,9 +59,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div onClick={this.refreshPage}>
-          <Header text="GIPHY" />
-        </div>
+        <Header onClick={this.refreshPage} text="GIPHY" />
         <Search loading={this.state.loading} search={this.search} />
         <p className="App-intro">Sharing a few of our favourite GIF's</p>
         <div className="images">

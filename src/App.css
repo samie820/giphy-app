@@ -75,15 +75,23 @@
   margin-top: 5px;
 }
 
-input[type="button"] {
+.search > input[type="text"]{
+  width: 50%;
+  padding: 10px;
+  margin-right: 5px;
+}
+
+.search > input[type="submit"] {
   padding: 5px;
   width: 80px;
-  border: none;
+  border-width: 2px;
+  background-color: transparent;
+  border-color: black;
   margin-left: 5px;
   cursor: pointer;
 }
 
-input[type="button"]:hover {
+.search > input[type="submit"]:hover {
   background-color: #282c34;
   color: antiquewhite;
 }

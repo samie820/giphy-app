@@ -41,16 +41,6 @@
   margin: 0;
 }
 
-.add-images {
-  text-align: center;
-}
-
-.add-images button {
-  font-size: 16px;
-  padding: 8px;
-  margin: 0 10px 30px 10px;
-}
-
 .image {
   padding: 5px 25px 10px 25px;
   max-width: 25%;
